@@ -15,3 +15,11 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 }
 
+h1 {
+    margin: -10px;
+}
+
+header img {
+    height: 100px;
+    width: 100px;
+}
