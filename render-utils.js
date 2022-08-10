@@ -4,6 +4,9 @@ export function renderPlayerCard(player) {
     const img = document.createElement('img');
     const pName = document.createElement('p');
     const pPosition = document.createElement('p');
+    
+    div.classList.add('player-card');
+    pName.classList.add('player-name');
 
     a.href = '';
     img.src = `./assets/${player.first_name}-${player.last_name}.png`;
