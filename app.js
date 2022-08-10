@@ -1,8 +1,10 @@
 // import functions and grab DOM elements
+import { getRoster } from './fetch-utils.js';
 
-// let state
+async function loadData() {
+    const roster = await getRoster();
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+    console.log(roster);
+}
+
+loadData();
