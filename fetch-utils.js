@@ -5,8 +5,18 @@ const SUPABASE_KEY =
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getRoster() {
-    // from the dogs table, select all items
+    // from the roster table, select all items
     const response = await client.from('roster').select('*');
+    // and return the response
+    if (response.error) {
+        throw new Error(response.error.message);
+    }
+    return response.data;
+}
+
+export async function getPlayer(id) {
+    // from the roster table, select a single player who has the matching id
+    const response = await client.from('roster').select('*').match({ id }).single();
     // and return the response
     if (response.error) {
         throw new Error(response.error.message);
