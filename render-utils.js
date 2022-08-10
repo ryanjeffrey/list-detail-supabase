@@ -2,18 +2,18 @@ export function renderPlayerCard(player) {
     const div = document.createElement('div');
     const a = document.createElement('a');
     const img = document.createElement('img');
-    const pName = document.createElement('p');
-    const pPosition = document.createElement('p');
+    const nameEl = document.createElement('p');
+    const positionEl = document.createElement('p');
     
     div.classList.add('player-card');
-    pName.classList.add('player-name');
+    nameEl.classList.add('player-name');
 
     a.href = `./detail/?id=${player.id}`;
     img.src = `./assets/${player.first_name}-${player.last_name}.png`;
-    pName.textContent = `${player.first_name} ${player.last_name}`;
-    pPosition.textContent = player.position;
+    nameEl.textContent = `${player.first_name} ${player.last_name}`;
+    positionEl.textContent = player.position;
 
-    div.append(img, pName, pPosition);
+    div.append(img, nameEl, positionEl);
 
     a.append(div);
     
