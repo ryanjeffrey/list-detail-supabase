@@ -6,30 +6,102 @@
 
 body {
     height: 100vh;
-    font-family: 'Rubik', san-serif;
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
-
-header {
-    position: sticky;
-    top: 0;
+    margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
-    background-color: var(--header-background);
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
-main {
-    padding: 20px;
+h1 {
+    margin: -10px;
+    font-size: 1rem;
 }
 
-footer {
-    position: sticky;
-    bottom: 0;
-    padding: 7px 20px;
-    font-size: .8em;
+header img {
+    height: 100px;
+    width: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* HOME PAGE */
+
+#player-list {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--footer-background);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 100px 20px;
+}
+
+.player-card {
+    background: #0a162a0f;
+    margin: 20px;
+    padding: 4px;
+}
+
+.player-card img {
+    height: 300px;
+    width: 300px;
+}
+
+.player-card p {
+    margin: 4px;
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.player-name {
+    font-weight: bold;
+}
+
+/* DETAIL PAGE */
+
+.player-details {
+    margin: 40px auto;
+    max-width: 600px;
+    background: #0a162a0f;
+    padding: 40px;
+}
+
+.player-details img {
+    height: 500px;
+    width: 500px;
+}
+
+.player-detail-name {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column {
+    text-align: left;
+}
+
+.right-column {
+    text-align: right;
+}
+
+.left-column p:nth-child(1),
+.right-column p:nth-child(1)
+{
+    font-weight: bold;
+}
+
+.bio {
+    margin-top: 40px;
+    font-size: .9rem;
+    text-align: justify;
 }
